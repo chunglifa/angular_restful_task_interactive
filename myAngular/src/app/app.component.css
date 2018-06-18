@@ -1,0 +1,31 @@
+.headerArea{
+  border: 2px solid blue;
+  width: 1000px;
+  height: 100px;
+  align-content: center;
+  margin: auto;
+}
+
+.tasks{
+  border: 2px solid red;
+  width: 1000px;
+  height: 300px;
+  align-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+.show{
+  border: 2px solid yellowgreen;
+  width: 1000px;
+  height: 100px;
+  align-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+#showTasks{
+  align-content: center;
+  margin: auto;
+  text-align: center;
+}
