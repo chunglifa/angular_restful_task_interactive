@@ -1,22 +1,39 @@
-.headerArea{
+/* .headerArea{
   border: 2px solid blue;
   width: 1000px;
   height: 100px;
   align-content: center;
   margin: auto;
+} */
+.wrapper{
+  border: 2px solid blue;
+  width: 1000px;
+  height: auto;
+  align-content: center;
+  margin: auto;
 }
 
 .tasks{
-  border: 2px solid red;
-  width: 1000px;
+  width: 85%;
+  height: auto;
+  align-content: center;
+  margin: auto;
+  text-align: center;
+  display: inline-block;
+}
+
+.update{
+  width: 8%;
   height: 300px;
   align-content: center;
   margin: auto;
   text-align: center;
+  display: inline-block;
+  vertical-align: top;
 }
 
-.show{
-  border: 2px solid yellowgreen;
+.submitForm{
+  border: 2px solid purple;
   width: 1000px;
   height: 100px;
   align-content: center;
@@ -24,8 +41,8 @@
   text-align: center;
 }
 
-#showTasks{
-  align-content: center;
-  margin: auto;
-  text-align: center;
+#updateForm input{
+  width: 100px;
+  height: 20px;
+  display: block;
 }

@@ -37,6 +37,7 @@ module.exports = {
         })
     },
     postTask: function (req, res) {
+        console.log('DATA FROM RAJAN.SERVICE');
         console.log("POST DATA", req.body);
         var task = new Task({
             title: req.body.title,
@@ -57,14 +58,15 @@ module.exports = {
             }
         })
     },
+
+
     editTask: function (req, res) {
-        console.log('EDIT DATA', req.body);
-        console.log(req.params.id);
-        Task.findOne({ _id: req.params.id }, function (err, tasks) {
-            tasks.title = req.body.title;
-            tasks.description = req.body.description;
-            tasks.completed = req.body.completed;
-            tasks.save(function (err) {
+        console.log('REQ.PARAMS', req.params)
+        console.log('REQ.BODY',req.body)
+        Task.findOne({ _id: req.params.id }, function (err, task) {
+            task.title = req.body.title;
+            task.description = req.body.description;
+            task.save(function (err) {
                 if(err){
                     console.log('error');
                     for(var key in err.errors);
@@ -79,12 +81,14 @@ module.exports = {
 
     },
     delete: function (req, res) {
+        console.log('getting to delete function in taskCont');
+        console.log(req.params.id);
         Task.remove({ _id: req.params.id }, function (err) {
             if(err){
                 res.json({message:"why still here?!?!?1"});
             }
             else{
-                res.json({message:"You dun goofed"});
+                res.json({message:"You deleted the task!"});
             }
             
         })

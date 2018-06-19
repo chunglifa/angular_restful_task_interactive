@@ -4,6 +4,7 @@ import { RajanService } from './rajan.service';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SperoService } from './spero.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { SperoService } from './spero.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [RajanService, SperoService],
   bootstrap: [AppComponent]

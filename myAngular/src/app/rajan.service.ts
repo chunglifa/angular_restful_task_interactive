@@ -7,21 +7,24 @@ import { HttpClient } from '@angular/common/http';
 export class RajanService {
 
   constructor(private _http: HttpClient) {
-    // this.getTasks();
-    // this.view();
+
    }
   getTasks() {
-
     return this._http.get('/tasks');
-    //this route goes to server route /tasks and returns that back
-
+  }
+  postTask(newTask) {
+    console.log('rajan.service.ts', newTask);
+    return this._http.post('/tasks', newTask);
   }
 
-
-
-  destroy() {
-
+  editTask(selectedTask) {
+    console.log('Getting to editTask() in rajan.Service.ts');
+    console.log('editing task', selectedTask);
+    return this._http.put('/edit/'+selectedTask._id, selectedTask);
   }
-
-
+  deleteTask(id) {
+    console.log('Getting to deleteTask function');
+    console.log(id);
+    return this._http.delete('/tasks/'+id);
+  }
 }
